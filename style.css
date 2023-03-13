@@ -1,0 +1,217 @@
+                * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                    background-color: rgb(9, 9, 33);
+                    color: #FFFFFF;
+                }
+                /* ----------- Nav Bar Style ---------  */
+                
+                nav {
+                    /* background-color: aqua; */
+                    padding: 10px;
+                    box-shadow: 2px 5px 10px gray;
+                }
+                
+                nav img {
+                    width: 200px;
+                    background-color: beige;
+                    border-radius: 5px;
+                }
+                
+                nav ul {
+                    /* background-color: aliceblue; */
+                    list-style: none;
+                    float: right;
+                    line-height: 80px;
+                }
+                
+                nav ul li {
+                    display: inline-block;
+                    align-self: center;
+                    margin-right: 1rem;
+                }
+                
+                nav ul li a {
+                    position: relative;
+                    text-decoration: none;
+                    font-size: 22px
+                }
+                
+                nav ul li a:before {
+                    position: absolute;
+                    content: '';
+                    left: 0;
+                    bottom: 0;
+                    height: 3px;
+                    width: 100%;
+                    background-color: #FFFFFF;
+                    transform: scaleX(0);
+                    transform-origin: right;
+                    transition: transform .4s linear;
+                }
+                
+                nav ul li a:hover:before {
+                    transform: scaleX(1);
+                    transform-origin: left;
+                }
+                
+                label {
+                    line-height: 80px;
+                    float: right;
+                    margin-right: 10px;
+                    cursor: pointer;
+                }
+                
+                input,
+                #cancel,
+                #menu {
+                    display: none;
+                }
+                
+                @media screen and (max-width:700px) {
+                    #menu {
+                        display: block;
+                        line-height: 80px;
+                    }
+                    ul {
+                        background-color: rgb(52, 54, 164);
+                        position: fixed;
+                        width: 20%;
+                        height: 60vh;
+                        top: 98px;
+                        left: -100%;
+                        text-align: center;
+                        transition: all .5s;
+                    }
+                    nav ul li {
+                        background-color: rgb(52, 54, 164);
+                        display: block;
+                        margin: 50px 0;
+                        line-height: 30px;
+                    }
+                    nav ul li a {
+                        background-color: rgb(52, 54, 164);
+                        font-size: 25px;
+                        font-weight: 600px;
+                    }
+                    #checkbox:checked~ul {
+                        left: 0;
+                    }
+                    #checkbox:checked~label #menu {
+                        display: none;
+                        transition: all .5s;
+                    }
+                    #checkbox:checked~label #cancel {
+                        display: block;
+                        transition: all .5s;
+                        line-height: 80px;
+                    }
+                }
+                /* ---------- Main Content Style --------  */
+                /* ------------- Row-1 Style ------  */
+                
+                .row-1 {
+                    display: flex;
+                    gap: 10px;
+                    margin: 1rem;
+                    align-items: center;
+                    justify-content: center;
+                }
+                
+                .row-1 .row-1-col-1 .line img {
+                    width: 50px;
+                    height: 45px;
+                }
+                
+                .row-1 .row-1-col-1 .line h4 {
+                    font-size: 20px;
+                    display: inline;
+                    position: relative;
+                    top: -8px;
+                }
+                
+                p {
+                    color: rgb(80, 101, 27);
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+                
+                .row-1 .row-1-col-2 img {
+                    width: 300px;
+                }
+                /* ---------- Row-2 Style ---------  */
+                
+                .row-2 {
+                    margin: auto;
+                    text-align: center;
+                }
+                /* --------- Row-3 style ----------  */
+                
+                .row-3 {
+                    display: flex;
+                    justify-content: center;
+                    gap: 10px;
+                }
+                /* --------- Row-4 style ----------  */
+                
+                .row-4 {
+                    display: flex;
+                    justify-content: center;
+                    gap: 10px;
+                }
+                /* ----------- Row-5 -----  */
+                
+                .row-5 {
+                    text-align: center;
+                    margin-bottom: 1rem;
+                }
+                /* ---------- Row-6 --------  */
+                
+                .row-6 {
+                    display: flex;
+                    justify-content: center;
+                    padding-bottom: 2rem;
+                    gap: 10px;
+                }
+                /* ------------ Image Frame Style ------  */
+                
+                .img-frame {
+                    width: 300px;
+                }
+                /* --------- Project-Text Style -----  */
+                
+                h3 {
+                    text-align: center;
+                }
+                /* ---------- Image Icon --------  */
+                
+                .img-icon {
+                    width: 30px;
+                    height: 30px;
+                }
+                /* Media Query For Project Frame  */
+                
+                @media screen and (max-width:700px) {
+                    #hand-img {
+                        box-sizing: content-box;
+                        margin: auto;
+                        padding: 10px;
+                    }
+                    .row {
+                        display: block;
+                        margin-bottom: 1rem;
+                        transition: all .5s;
+                        text-align: center;
+                    }
+                    .col {
+                        display: block;
+                        padding: 10px;
+                        margin-bottom: 1rem;
+                        transition: all .5s;
+                        text-align: center;
+                    }
+                    .row-6 a {
+                        display: inline-block;
+                    }
+                }
